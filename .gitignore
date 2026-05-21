@@ -141,3 +141,15 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Visual Studio
+.vs/
+
+# Mac
+.DS_Store
+
+# Etc
+*/desktop.ini
+
+# Microsoft Office temp lock files
+~$*
