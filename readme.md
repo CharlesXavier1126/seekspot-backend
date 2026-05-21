@@ -1,0 +1,1 @@
+# Seekspot backend README

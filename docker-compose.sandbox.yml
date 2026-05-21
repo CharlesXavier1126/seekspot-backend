@@ -1,0 +1,9 @@
+version: '3.8'
+# Sandbox: no local MySQL container — connects to CVM's existing MySQL instance
+services:
+  backend:
+    build: .
+    env_file: .env.sandbox
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
