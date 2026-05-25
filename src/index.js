@@ -19,9 +19,11 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use((req, res, next) => {
-  const secretHeader = req.headers['x-seekspot-origin'];
-  if (secretHeader !== process.env.ORIGIN_SECRET_KEY) {
-    return res.status(403).json({ error: 'Access denied' });
+  if (process.env.NODE_ENV !== 'development') {
+    const secretHeader = req.headers['x-seekspot-origin'];
+    if (secretHeader !== process.env.ORIGIN_SECRET_KEY) {
+      return res.status(403).json({ error: 'Access denied' });
+    }
   }
   next();
 });
