@@ -81,7 +81,7 @@ export const login = async (req, res) => {
       process.env.JWT_SECRET,
       { expiresIn: '25m' }
     );
-    res.json({ token, user_type: user.user_type });
+    res.json({ token, user_type: user.user_type, username: user.username });
   } catch (err) {
     res.status(400).json({ error: 'Login failed' });
   }
