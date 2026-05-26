@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS users (
   email         VARCHAR(255) NOT NULL UNIQUE,
   password      VARCHAR(255) NOT NULL,
   phone_number  VARCHAR(20),
-  user_type     ENUM('individual', 'agent', 'administrator', 'school') NOT NULL DEFAULT 'individual',
+  user_type     ENUM('individual', 'agent', 'administrator', 'school-recruiter', 'school-accountant', 'school-admin') NOT NULL DEFAULT 'individual',
   createdAt     DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updatedAt     DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

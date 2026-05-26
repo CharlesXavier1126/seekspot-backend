@@ -4,7 +4,7 @@ import { User } from '../models/index.js';
 import { set as cacheSet, get as cacheGet, del as cacheDel } from '../utils/verificationCache.js';
 import { sendVerificationEmail } from '../utils/emailService.js';
 
-const ALLOWED_REGISTER_TYPES = ['individual', 'agent', 'school'];
+const ALLOWED_REGISTER_TYPES = ['individual', 'agent', 'school-recruiter', 'school-accountant', 'school-admin'];
 
 const generateCode = () => String(Math.floor(100000 + Math.random() * 900000));
 

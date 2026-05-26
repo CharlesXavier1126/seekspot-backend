@@ -26,7 +26,7 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING(20)
   },
   user_type: {
-    type: DataTypes.ENUM('individual', 'agent', 'administrator', 'school'),
+    type: DataTypes.ENUM('individual', 'agent', 'administrator', 'school-recruiter', 'school-accountant', 'school-admin'),
     allowNull: false,
     defaultValue: 'individual'
   }
