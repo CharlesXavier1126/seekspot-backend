@@ -9,8 +9,8 @@ docker compose --env-file .env.dev exec db mysql -u seekspot_user -pseekspot_pas
 
 | Task | Command |
 |---|---|
-| Start backend | `docker compose --env-file .env.dev up -d` (in `seekspot-backend/`) |
-| Start frontend | `npm run dev` (in `seekspot-frontend/`) |
+| Start backend | `docker compose --env-file .env.dev up -d` |
+| Start frontend | `npm run dev` |
 | Stop backend | `docker compose down` |
 | Reset DB entirely | `docker compose down -v` |
 | Frontend changes | Hot reload — Vite watches automatically |
