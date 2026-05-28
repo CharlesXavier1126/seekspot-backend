@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('./index').sequelize;
+import { DataTypes } from 'sequelize';
+import { sequelize } from './db.js';
 
 const School = sequelize.define('School', {
   id: {
@@ -24,4 +24,4 @@ const School = sequelize.define('School', {
   tableName: 'schools'
 });
 
-module.exports = School;
+export { School };
