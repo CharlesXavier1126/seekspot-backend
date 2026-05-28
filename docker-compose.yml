@@ -12,6 +12,7 @@ services:
       - "3307:3306"   # Use 3307 on host to avoid conflict with seekschool's 3306
     volumes:
       - db_data:/var/lib/mysql
+      - ./docker/init:/docker-entrypoint-initdb.d
 
   backend:
     build: .
